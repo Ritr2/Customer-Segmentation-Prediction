@@ -1,22 +1,25 @@
-# Customer-Segmentation-Prediction
-Imagine you are the owner of a shop. It doesn't matter if you own an e-commerce or a supermarket. It doesn't matter if it is a small shop or a huge company such as Amazon or Netflix, it's better to know your customers.  Machine learning comes in handy for this task. Particularly, clustering, the most important unsupervised learning problem, is able to create categories grouping similar individuals.  These categories are called clusters. A cluster is a collection of points in a dataset. These points are more similar between them than they are to points belonging to other clusters. Distance-based clustering groups the points into some number of clusters such that distances within the cluster should be small while distances between clusters should be large.
-Purpose
+We endeavour to find the various customer segments using the online retail store's transaction data obtained from UCI Machine Learning Dataset repository. This is a transnational data set which contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail.
+Data Description
 
-The goal of this project is to:
+There are 240,007 observations of 8 variables as follow: Screenshot 2021-06-15 at 3 20 22 PM
+The need of customer segmentation:
 
-    Perform an exploratory analysis on the dataset.
-    Check that the assumptions K-means makes are fulfilled.
-    Apply K-means clustering algorithm in order to segment customers.
+The differences in customers' behaviour, demographics, geographies, etc. help in classifying them in groups. Learning about different groups in the customer can help with following:
 
-Data Set Information
+    Target Marketing
+    Client understanding
+    Optimal product placement
+    Searching for new customers
+    Revenue growth
+    Recency-Frequency-Monetary (RFM) model to determine customer value:
 
-The csv file corresponding used herein was downloaded from Kaggle repository. The dataset contains data about customers from a Mall. The information gather is: Customer ID, Age, Annual Income (k$), Spending Score (1-100).
-Analysis
+The RFM model is quite useful model in retail customer segmentation where only the data of customer transaction is available. RFM stands for the three dimensions:
 
-This repository contains two files:
+    Recency – How recently did the customer purchase?
+    Frequency – How often do they purchase?
+    Monetary Value – How much do they spend?
+    A combination of these three attributes can be defined to assign a quantitative value to customers. e.g. A customer who recently bought high value products and transacts regularly is a high value customer.
 
-    clustering_analysis.ipybn: In this jupyter notebook, exploratory data analysis is performed. Moreover, the algorithm assumptions are checked. K-means is applied to segment customers obtaining a graph and the customer segments. It is also shown how to predict to which segment a new customers belongs to.
-    customers.csv dataset used to perform the analysis.
+Segmentation with K-means clustering:
 
-The whole analysis was done using JupyterLab and Python, using libraries such as: pandas, numpy, matplotlib, and scikit-learn.
-
+Initially, the data is subject to important stages in an analytics pipeline: exploratory analysis, preprocessing, feature engineering and standardizaton. Then, the unsupervised classification technique, K-means clustering algorithm, is used to determine the ideal segments of customers. Silhouette analysis and related cluster visualizations are leveraged to deduce the optimum value of "K" (number of clusters) in the algorithm. The observations from the results are elaborately discussed before reaching the conclusion from the business perspective.
